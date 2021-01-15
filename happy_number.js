@@ -1,18 +1,21 @@
 var readlineSync = require('readline-sync')
 var number = readlineSync.question('enter any number')
-var sum = 0
-var result;
-while (number > 0) {
-    result = number % 10
-    sum = sum + (result * result)
-    number = parseInt(number / 10)
-    console.log(number)
+
+var res = number
+var rem;
+while (sum != 1 && sum != 4) {
+    var sum = 0
+    while (number > 0) {
+        rem = number % 10
+        sum = sum + (rem*rem)
+        number = parseInt(number/10)
+        
+    }
+    number = sum
+    
 }
-
-console.log(sum)
-
-if(number == 0){
-    console.log('It is happy number')
+if(sum == 1){
+    console.log(res + ' is happy number')
 }else{
-    console.log('It is not happy number')
+    console.log(res + ' is not unhappy number')
 }
